@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self'; object-src 'none'; connect-src 'self';"> <!-- Política CSP mejorada -->
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload"> <!-- HSTS -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff"> <!-- Prevención de ataques de tipo MIME -->
+  <meta http-equiv="X-Frame-Options" content="DENY"> <!-- Prevención de clickjacking -->
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block"> <!-- Protección contra XSS -->
+  <title>CyberElite | Experto en Ciberseguridad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="apple-icon.png">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="navbar">
+    <div class="left">CyberElite</div>
+    <div class="right">
+      <a href="#bienvenida">Bienvenida</a>
+      <a href="#conocimientos">Conocimientos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+
+  <!-- Sección de Bienvenida -->
+  <section id="bienvenida" class="bienvenida">
+    <div class="container">
+      <h2>Bienvenido a mi Portafolio de Ciberseguridad</h2>
+      <p>Hola, soy un Analista Junior de Ciberseguridad, y este es mi espacio para compartir mis conocimientos y habilidades en el ámbito digital.</p>
+      <p>Desde conceptos fundamentales hasta técnicas avanzadas de hacking ético, me enfoco en proteger sistemas y redes contra amenazas cibernéticas.</p>
+    </div>
+  </section>
+
+  <!-- Sección de Conocimientos -->
+  <section id="conocimientos" class="conocimientos">
+    <div class="container">
+      <h2>Mis Conocimientos en Ciberseguridad</h2>
+      <div class="skills">
+        <div class="skill-item">
+          <h3><i class="fas fa-lock"></i> Fundamentos en Ciberseguridad</h3>
+          <p>Comprensión de los principios básicos de seguridad informática y la protección de datos y sistemas.</p>
+        </div>
+        <div class="skill-item">
+          <h3><i class="fas fa-network-wired"></i> Redes</h3>
+          <p>Conocimientos en configuración, monitoreo y seguridad de redes, incluidas redes privadas y públicas.</p>
+        </div>
+        <div class="skill-item">
+          <h3><i class="fas fa-key"></i> Criptografía</h3>
+          <p>Aplicación de técnicas criptográficas para asegurar la integridad, confidencialidad y autenticidad de la información.</p>
+        </div>
+        <div class="skill-item">
+          <h3><i class="fas fa-code"></i> Programación (Python y Bash)</h3>
+          <p>Desarrollo de scripts y herramientas de automatización para auditorías de seguridad y análisis de vulnerabilidades.</p>
+        </div>
+        <div class="skill-item">
+          <h3><i class="fas fa-desktop"></i> Sistemas Operativos</h3>
+          <p>Experiencia básica en la administración y configuración de sistemas operativos populares en el ámbito de la ciberseguridad.</p>
+        </div>
+        <div class="skill-item">
+          <h3><i class="fas fa-user-shield"></i> Hacking Ético Básico</h3>
+          <p>Conocimientos para realizar pruebas de penetración y análisis de vulnerabilidades para mejorar la seguridad de las redes y sistemas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Sección de Contacto -->
+<section id="contacto" class="contacto">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>Si tienes alguna pregunta, duda o deseas colaborar, estaré encantado de recibir tu mensaje.</p>
+    <div class="contact-content">
+      <!-- Formulario con protección CSRF y validación de datos -->
+      <form id="contact-form" action="https://formspree.io/f/xeoogjql" method="POST" novalidate>
+        <!-- Campo CSRF Token oculto -->
+        <input type="hidden" id="csrf-token" name="csrf_token">
+        
+        <!-- Nombre -->
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+        </div>
+        
+        <!-- Correo electrónico -->
+        <div class="form-group">
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+        </div>
+        
+        <!-- Mensaje -->
+        <div class="form-group">
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+        </div>
+        
+        <!-- Botón de envío -->
+        <button type="submit" id="submit" class="btn-submit">Enviar</button>
+      </form>
+      
+      <!-- Imagen de contacto -->
+      <div class="contact-image">
+        <img src="assets/img/Logo_CyberElite.png" alt="Imagen de contacto">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Incluir el script JS -->
+<script src="assets/js/auth-script.js"></script>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 CyberElite | <a href="https://github.com/TechNinja-creador/" target="_blank" rel="noopener noreferrer">Mi GitHub</a></p>
+  </footer>
+</body>
+</html>
